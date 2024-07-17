@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=root
 Group=root
-WorkingDirectory=/opt/app/dj_cicd
+WorkingDirectory=/opt/app/cicd
 ExecStart=/opt/app/cicd/env/bin/gunicorn \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
