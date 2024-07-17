@@ -6,7 +6,7 @@ After=network.target
 User=root
 Group=root
 WorkingDirectory=/opt/app/dj_cicd
-ExecStart=/opt/app/dj_cicd/env/bin/gunicorn \
+ExecStart=/opt/app/cicd/env/bin/gunicorn \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
           library.wsgi
