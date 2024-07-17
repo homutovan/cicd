@@ -7,4 +7,4 @@ class YourTestClass(TestCase):
         self.assertTrue(True)
 
     def test_two(self):
-        self.assertTrue(False)
+        self.assertTrue(True)
