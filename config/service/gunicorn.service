@@ -1,0 +1,14 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+[Service]
+User=root
+Group=root
+WorkingDirectory=/opt/app/dj_cicd
+ExecStart=/opt/app/dj_cicd/env/bin/gunicorn \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          library.wsgi
+[Install]
+WantedBy=multi-user.target
