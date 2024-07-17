@@ -19,8 +19,8 @@ jobs:
       DB_ENGINE: ${{ secrets.DB_ENGINE }}
 
     services:
-      postgres:
-        image: postgres-latest
+      postgres_one:
+        image: postgres:latest
         env:
           POSTGRES_USER: ${{ env.POSTGRES_USER }}
           POSTGRES_PASSWORD: ${{ env.POSTGRES_PASS }}
